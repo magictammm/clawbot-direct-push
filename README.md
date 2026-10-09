@@ -1,5 +1,8 @@
 # clawbot-direct-push
 
+[![Views](https://hits.sh/github.com/magictammm/clawbot-direct-push.svg?label=Views&color=2b7489&style=flat-square)](https://hits.sh/github.com/magictammm/clawbot-direct-push/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-2b7489.svg?style=flat-square)](LICENSE)
+
 直连微信 ClawBot（iLink 协议）主动推送消息的 Agent Skill，同时提供「定时任务/自动化没推到微信」的全链路排查能力。
 
 ## 它解决什么问题

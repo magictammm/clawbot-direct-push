@@ -1,0 +1,91 @@
+{
+  "repo": "magictammm/clawbot-direct-push",
+  "updated_at": "2026-10-09T06:26:23Z",
+  "note": "GitHub 官方 Traffic 数据归档。API 仅返回最近 14 天，本文件逐日累计。",
+  "days": {
+    "2026-09-26": {
+      "views": 0,
+      "view_uniques": 0,
+      "clones": 0,
+      "clone_uniques": 0
+    },
+    "2026-09-27": {
+      "views": 0,
+      "view_uniques": 0,
+      "clones": 0,
+      "clone_uniques": 0
+    },
+    "2026-09-28": {
+      "views": 0,
+      "view_uniques": 0,
+      "clones": 0,
+      "clone_uniques": 0
+    },
+    "2026-09-29": {
+      "views": 0,
+      "view_uniques": 0,
+      "clones": 0,
+      "clone_uniques": 0
+    },
+    "2026-09-30": {
+      "views": 0,
+      "view_uniques": 0,
+      "clones": 0,
+      "clone_uniques": 0
+    },
+    "2026-10-01": {
+      "views": 0,
+      "view_uniques": 0,
+      "clones": 0,
+      "clone_uniques": 0
+    },
+    "2026-10-02": {
+      "views": 0,
+      "view_uniques": 0,
+      "clones": 0,
+      "clone_uniques": 0
+    },
+    "2026-10-03": {
+      "views": 0,
+      "view_uniques": 0,
+      "clones": 0,
+      "clone_uniques": 0
+    },
+    "2026-10-04": {
+      "views": 0,
+      "view_uniques": 0,
+      "clones": 0,
+      "clone_uniques": 0
+    },
+    "2026-10-05": {
+      "views": 0,
+      "view_uniques": 0,
+      "clones": 0,
+      "clone_uniques": 0
+    },
+    "2026-10-06": {
+      "views": 0,
+      "view_uniques": 0,
+      "clones": 0,
+      "clone_uniques": 0
+    },
+    "2026-10-07": {
+      "views": 0,
+      "view_uniques": 0,
+      "clones": 0,
+      "clone_uniques": 0
+    },
+    "2026-10-08": {
+      "views": 0,
+      "view_uniques": 0,
+      "clones": 0,
+      "clone_uniques": 0
+    },
+    "2026-10-09": {
+      "views": 0,
+      "view_uniques": 0,
+      "clones": 0,
+      "clone_uniques": 0
+    }
+  }
+}

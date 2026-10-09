@@ -1,0 +1,38 @@
+name: Traffic Stats
+
+on:
+  schedule:
+    # 每天 01:00 UTC = 09:00 北京时间
+    - cron: '0 1 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: traffic-stats
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: 抓取并归档 Traffic
+        env:
+          # 优先用自定义 PAT（若已配置）；未配置时回退到内置 GITHUB_TOKEN
+          GH_TOKEN: ${{ secrets.TRAFFIC_PAT || secrets.GITHUB_TOKEN }}
+        run: python3 scripts/collect_traffic.py
+
+      - name: 提交变更
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add stats/
+          if git diff --cached --quiet; then
+            echo "无变化，跳过提交"
+          else
+            git commit -m "chore(stats): 更新访问统计 [skip ci]"
+            git push
+          fi

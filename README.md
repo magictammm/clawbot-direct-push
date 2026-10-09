@@ -62,14 +62,34 @@ $PY "$SD/scripts/clawbot_push.py" send --file /tmp/body.txt --print   # 只打�
 ```
 clawbot-direct-push/
 ├── SKILL.md                        # 技能主文档（触发条件、核心事实、排查法、模板）
+├── README.md                       # 本文件
+├── LICENSE                         # MIT
+├── .github/workflows/traffic.yml   # 每日归档访问统计的工作流
 ├── assets/
 │   └── clawbot_cred.example.json   # 凭证配置示例（占位值，勿填真值提交）
 ├── references/
 │   ├── root-cause.md               # `-14` 报错的完整根因与排查时间线
 │   └── channels.md                 # 通道拓扑与「消息去哪了」判定
-└── scripts/
-    └── clawbot_push.py             # 推送 / 体检 / 恢复脚本
+├── scripts/
+│   ├── clawbot_push.py             # 推送 / 体检 / 恢复脚本
+│   └── collect_traffic.py          # 抓取 GitHub Traffic 并归档
+└── stats/
+    ├── traffic.json                # 长期流量归档（逐日累计，不会过期）
+    └── traffic.md                   # 可读报表
 ```
+
+## 访问统计
+
+README 顶部的 Views 徽章来自 [hits.sh](https://hits.sh)，是公开可见的粗略计数（图片经 GitHub Camo 代理抓取，只能看趋势）。
+
+想要**准确数字**，看仓库自带的长期归档：
+
+- `.github/workflows/traffic.yml` 每天 09:00（北京时间）抓一次 GitHub 官方 Traffic API，
+  并入 [`stats/traffic.json`](stats/traffic.json)，同时生成报表 [`stats/traffic.md`](stats/traffic.md)。
+  GitHub 网页端只保留 14 天，这份归档不会过期。
+- 手动触发：仓库 **Actions → Traffic Stats → Run workflow**。
+- 若内置 `GITHUB_TOKEN` 读不到 Traffic（返回 403），到 **Settings → Secrets and variables → Actions**
+  加一个具备 `repo` 权限的 `TRAFFIC_PAT`，工作流会自动优先使用它。
 
 ## 注意事项
 

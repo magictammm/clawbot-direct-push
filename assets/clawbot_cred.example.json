@@ -1,0 +1,13 @@
+{
+  "_说明": "示例文件，请勿把真实凭证提交到任何仓库。真实副本放在 ~/.workbuddy/clawbot_cred.json（权限 0600），可由 clawbot_push.py recover 自动生成。",
+  "botToken": "0123abcd4567@im.bot:060000deadbeefdeadbeefdeadbeefdeadbeef",
+  "baseUrl": "https://ilinkai.weixin.qq.com",
+  "accountId": "0123abcd4567@im.bot",
+  "userId": "oXXXXXXXXXXXXXXXXXXXXXXXXX@im.wechat",
+  "note": "botToken 取自 ~/.workbuddy/settings.json 或其 settings.json.bak-* 备份（App 5.6.2 起 settings.json 内为 $wbEncrypted 密文）",
+  "fallback": {
+    "_说明": "可选兜底通道：ClawBot 保活窗口（24h/10条）失效、全部重试失败时自动改走该通道补发。删掉本字段即关闭。",
+    "type": "pushplus",
+    "token": "<pushplus 公众号的 token，https://www.pushplus.plus 注册并完成实名后获取>"
+  }
+}

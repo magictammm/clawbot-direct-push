@@ -1,6 +1,6 @@
 {
   "repo": "magictammm/clawbot-direct-push",
-  "updated_at": "2026-11-27T09:23:35Z",
+  "updated_at": "2026-11-28T08:39:04Z",
   "note": "GitHub 官方 Traffic 数据归档。API 仅返回最近 14 天，本文件逐日累计。",
   "days": {
     "2026-09-26": {
@@ -374,6 +374,12 @@
       "view_uniques": 2,
       "clones": 19,
       "clone_uniques": 12
+    },
+    "2026-11-27": {
+      "views": 0,
+      "view_uniques": 0,
+      "clones": 4,
+      "clone_uniques": 2
     }
   }
 }
